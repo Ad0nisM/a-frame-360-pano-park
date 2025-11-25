@@ -10,6 +10,17 @@
 
     <a-scene>
         <a-sky src="Nummer_1.webp" rotation="0 -130 0"></a-sky>
+        <a-sphere id="hotspot1" position="2 1.5 -3" radius="0.3" color="#FF0000" class="clickable"></a-sphere>
     </a-scene>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const sky = document.querySelector('a-sky');
+        const hotspot = document.querySelector('#hotspot1');
+
+        hotspot.addEventListener('click', () => {
+          sky.setAttribute('src', 'Nummer_2.webp');
+        });
+      });
+    </script>
 </body>
 </html>
